@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForecastDayCell">
+            <connections>
+                <outlet property="ContainerView" destination="3" id="name-outlet-3"/>
+                <outlet property="DateLabel" destination="12" id="name-outlet-12"/>
+                <outlet property="Icon" destination="6" id="name-outlet-6"/>
+                <outlet property="MaxLabel" destination="8" id="name-outlet-8"/>
+                <outlet property="MinLabel" destination="9" id="name-outlet-9"/>
+                <outlet property="WeatherDescription" destination="7" id="name-outlet-7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="270" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1aZ-V2-l2g"/>
+                        <constraint firstAttribute="width" constant="40" id="Pwb-Gn-6ri"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Description]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                    <rect key="frame" x="10" y="35" width="90" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Max]" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="218" y="7" width="44" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Min]" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                    <rect key="frame" x="220" y="32" width="40" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Date]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="10" y="10" width="56" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="9" secondAttribute="trailing" constant="10" id="5f9-aO-ZOw"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="12" secondAttribute="bottom" constant="1" id="AJS-7z-OkK"/>
+                <constraint firstItem="6" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" id="CHb-5h-7Qq"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="10" id="Igs-s8-zKY"/>
+                <constraint firstAttribute="trailing" secondItem="6" secondAttribute="trailing" constant="10" id="hDQ-Ob-BdU"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="8" secondAttribute="trailing" constant="8" id="mFt-iP-fLQ"/>
+                <constraint firstItem="9" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="4" id="mSj-8l-8GP"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="pC7-zA-gqb"/>
+                <constraint firstItem="12" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="voh-Vm-p53"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="10" id="zyg-FM-HK7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="107" y="13"/>
+        </view>
+    </objects>
+</document>
