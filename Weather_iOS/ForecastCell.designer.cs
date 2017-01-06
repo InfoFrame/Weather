@@ -10,20 +10,20 @@ using System.CodeDom.Compiler;
 
 namespace Weather_iOS
 {
-    [Register ("ForecastDayCell")]
-    partial class ForecastDayCell
+    [Register ("ForecastCell")]
+    partial class ForecastCell
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView ContainerView { get; set; }
-
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel DateLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView Icon { get; set; }
+        UIKit.UILabel DescriptionLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView ImageView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -33,25 +33,21 @@ namespace Weather_iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel MinLabel { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel WeatherDescription { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (ContainerView != null) {
-                ContainerView.Dispose ();
-                ContainerView = null;
-            }
-
             if (DateLabel != null) {
                 DateLabel.Dispose ();
                 DateLabel = null;
             }
 
-            if (Icon != null) {
-                Icon.Dispose ();
-                Icon = null;
+            if (DescriptionLabel != null) {
+                DescriptionLabel.Dispose ();
+                DescriptionLabel = null;
+            }
+
+            if (ImageView != null) {
+                ImageView.Dispose ();
+                ImageView = null;
             }
 
             if (MaxLabel != null) {
@@ -62,11 +58,6 @@ namespace Weather_iOS
             if (MinLabel != null) {
                 MinLabel.Dispose ();
                 MinLabel = null;
-            }
-
-            if (WeatherDescription != null) {
-                WeatherDescription.Dispose ();
-                WeatherDescription = null;
             }
         }
     }

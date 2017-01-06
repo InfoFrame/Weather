@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using Foundation;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using UIKit;
 using Weather_Core;
-using MvvmCross.Binding.BindingContext;
 
 namespace Weather_iOS
 {
-	public partial class CitiesView : MvxViewController
+	public partial class CityView : MvxViewController
 	{
 
 		public class TableSource : MvxSimpleTableViewSource
@@ -26,33 +25,25 @@ namespace Weather_iOS
 
 		}
 
-
-		public CitiesView() : base("CitiesView", null)
+		public CityView() : base("CityView", null)
 		{
-		}
-
-		public new CitiesViewModel ViewModel
-		{
-			get { return (CitiesViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
 		}
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 
-			Title = "Cities";
+			this.CreateBinding(Title).To<CityViewModel>(vm => vm.Today.CityName).Apply();
+			this.CreateBinding(TempLabel).To<CityViewModel>(vm => vm.Today.CurrentTemp).Apply();
+			this.CreateBinding(WeatherDescriptionLabel).To<CityViewModel>(vm => vm.Today.WeatherDescription).Apply();
 
+			var source = new TableSource(TableView, "ForecastCell", "Cell");
 
-			var source = new TableSource(TableView, "CityCell", "Cell");
-
-			this.CreateBinding(source).To<CitiesViewModel>(vm => vm.Todays).Apply();
-			this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<CitiesViewModel>(vm => vm.ShowCityCommand).Apply();
+			this.CreateBinding(source).To<CityViewModel>(vm => vm.Forecast.Forecasts).Apply();
 
 			TableView.Source = source;
 			TableView.ReloadData();
 		}
-
 
 	}
 }

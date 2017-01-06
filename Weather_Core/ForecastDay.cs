@@ -15,7 +15,15 @@ namespace Weather_Core
 		public long Day { get; set; }
 
 
+		private const string ImageUrlFormat = "http://openweathermap.org/img/w/{0}.png";
 
+		public string ImageUrl		{
+			get
+			{
+				return string.Format(ImageUrlFormat, IconUrl);
+			}
+		}
+	
 		private static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
 		{
 			// Unix timestamp is seconds past epoch

@@ -35,6 +35,7 @@
     <Compile Include="Forecast.cs" />
     <Compile Include="CitiesViewModel.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="CityViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

@@ -33,5 +33,22 @@ namespace Weather_Core
 
 		}
 
+		private MvxCommand<Today> _showCityCommand;
+		public MvxCommand<Today> ShowCityCommand
+		{
+			get
+			{
+				_showCityCommand = _showCityCommand ?? new MvxCommand<Today>(ShowCity);
+				return _showCityCommand;
+			}
+		}
+
+		private void ShowCity(Today today)
+		{
+			ShowViewModel<CityViewModel>(today);
+
+		}
+
+
 	}
 }
