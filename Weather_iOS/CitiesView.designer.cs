@@ -11,8 +11,8 @@ using UIKit;
 
 namespace Weather_iOS
 {
-    [Register ("CitiesViewController")]
-    partial class CitiesViewController
+    [Register ("CitiesView")]
+    partial class CitiesView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

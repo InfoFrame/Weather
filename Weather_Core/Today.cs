@@ -16,6 +16,16 @@ namespace Weather_Core
 		public double CurrentTemp { get; set; }
 		public long TimeStamp { get; set; }
 
+		private const string ImageUrlFormat = "http://openweathermap.org/img/w/{0}.png";
+
+		public string ImageUrl 
+		{
+			get
+			{
+				return string.Format(ImageUrlFormat, IconUrl);
+			}
+		}
+
 		public static Today FromJson(string jsonString) {
 			dynamic json = JObject.Parse(jsonString);
 			var result = new Today()
