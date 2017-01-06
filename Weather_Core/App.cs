@@ -1,6 +1,7 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using Weather_Core.ViewModels;
 
 namespace Weather_Core
 {

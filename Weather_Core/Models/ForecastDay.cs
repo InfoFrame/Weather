@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Realms;
 
-namespace Weather_Core
+namespace Weather_Core.Models
 {
 	public class ForecastDay : RealmObject
 	{

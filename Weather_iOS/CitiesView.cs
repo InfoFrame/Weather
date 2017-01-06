@@ -6,6 +6,7 @@ using MvvmCross.iOS.Views;
 using UIKit;
 using Weather_Core;
 using MvvmCross.Binding.BindingContext;
+using Weather_Core.ViewModels;
 
 namespace Weather_iOS
 {

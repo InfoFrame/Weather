@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using MvvmCross.Core.ViewModels;
+using Weather_Core.Models;
+using Weather_Core.Services;
 
-namespace Weather_Core
+namespace Weather_Core.ViewModels
 {
 	public class CitiesViewModel : MvxViewModel
 	{

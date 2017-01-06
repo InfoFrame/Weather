@@ -5,8 +5,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Realms;
+using Weather_Core.Models;
 
-namespace Weather_Core
+namespace Weather_Core.Services
 {
 	public class DataSource
 	{

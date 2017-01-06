@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Realms;
 
-namespace Weather_Core
+namespace Weather_Core.Models
 {
 	public class Today : RealmObject
 	{
