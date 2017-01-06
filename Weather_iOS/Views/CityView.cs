@@ -7,7 +7,7 @@ using UIKit;
 using Weather_Core;
 using Weather_Core.ViewModels;
 
-namespace Weather_iOS
+namespace Weather_iOS.Views
 {
 	public partial class CityView : MvxViewController
 	{

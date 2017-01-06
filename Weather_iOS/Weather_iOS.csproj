@@ -143,13 +143,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="CitiesView.xib" />
-    <InterfaceDefinition Include="CityCell.xib" />
-    <InterfaceDefinition Include="CityView.xib" />
-    <InterfaceDefinition Include="ForecastCell.xib" />
+    <InterfaceDefinition Include="Views\CitiesView.xib" />
+    <InterfaceDefinition Include="Views\CityCell.xib" />
+    <InterfaceDefinition Include="Views\CityView.xib" />
+    <InterfaceDefinition Include="Views\ForecastCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -161,22 +162,22 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="CitiesView.cs" />
-    <Compile Include="CitiesView.designer.cs">
-      <DependentUpon>CitiesView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CityCell.cs" />
-    <Compile Include="CityCell.designer.cs">
-      <DependentUpon>CityCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
-    <Compile Include="CityView.cs" />
-    <Compile Include="CityView.designer.cs">
+    <Compile Include="Views\CitiesView.cs" />
+    <Compile Include="Views\CitiesView.designer.cs">
+      <DependentUpon>CitiesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CityCell.cs" />
+    <Compile Include="Views\CityCell.designer.cs">
+      <DependentUpon>CityCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CityView.cs" />
+    <Compile Include="Views\CityView.designer.cs">
       <DependentUpon>CityView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForecastCell.cs" />
-    <Compile Include="ForecastCell.designer.cs">
+    <Compile Include="Views\ForecastCell.cs" />
+    <Compile Include="Views\ForecastCell.designer.cs">
       <DependentUpon>ForecastCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>

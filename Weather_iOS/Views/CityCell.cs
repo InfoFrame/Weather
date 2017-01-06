@@ -7,7 +7,7 @@ using MvvmCross.Binding.BindingContext;
 using Weather_Core;
 using Weather_Core.Models;
 
-namespace Weather_iOS
+namespace Weather_iOS.Views
 {
 	public partial class CityCell : MvxTableViewCell
 	{

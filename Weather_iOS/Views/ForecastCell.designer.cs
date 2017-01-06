@@ -8,7 +8,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace Weather_iOS
+namespace Weather_iOS.Views
 {
     [Register ("ForecastCell")]
     partial class ForecastCell

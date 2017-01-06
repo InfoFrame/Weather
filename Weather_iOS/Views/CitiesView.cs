@@ -8,7 +8,7 @@ using Weather_Core;
 using MvvmCross.Binding.BindingContext;
 using Weather_Core.ViewModels;
 
-namespace Weather_iOS
+namespace Weather_iOS.Views
 {
 	public partial class CitiesView : MvxViewController
 	{

@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Weather_iOS
+namespace Weather_iOS.Views
 {
     [Register ("CityView")]
     partial class CityView
