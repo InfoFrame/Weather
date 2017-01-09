@@ -9,17 +9,28 @@ using Android.Graphics;
 using System.Net;
 using Android.Net;
 using System.Threading.Tasks;
+using MvvmCross.Droid.Views;
+using Weather_Core.ViewModels;
 
 namespace Weather_Droid
 {
 	[Activity(Label = "Weather", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class CitiesActivity : Activity
+	public class CitiesView : MvxActivity
 	{
 
-		//public List<long> _cityIds = new List<long> { 2172797 };
-		public List<long> _cityIds = new List<long> { 2172797, 7284828, 2647123, 716963 };
+		public new CitiesViewModel ViewModel
+		{
+			get { return (CitiesViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
 
+		protected override void OnViewModelSet()
+		{
+			base.OnViewModelSet();
+			SetContentView(Resource.Layout.Cities);
+		}
 
+		/*
 		public class CitiesAdapter : BaseAdapter<long>
 		{
 			Activity context;
@@ -88,16 +99,15 @@ namespace Weather_Droid
 
 				return imageBitmap;
 			}
+
+	}
 */
-		}
 
-
-		ListView _listView;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
+		/*
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Cities);
 
@@ -112,7 +122,7 @@ namespace Weather_Droid
 				intent.PutExtra("CityId", (long)_listView.GetItemAtPosition(e.Position));
 				StartActivity(intent);
 			};
-
+		*/
 		}
 	}
 }

@@ -9,7 +9,7 @@ namespace Weather_Core.ViewModels
 	public class CitiesViewModel : MvxViewModel
 	{
 
-		public List<long> _cityIds = new List<long> { 2172797, 7284828, 2647123, 716963 };
+		public List<long> _cityIds = new List<long> { 2172797, 716963 };
 
 		public CitiesViewModel()
 		{
