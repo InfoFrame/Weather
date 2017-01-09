@@ -31,6 +31,7 @@ namespace Weather_Droid
 		{
 			base.OnViewModelSet();
 			SetContentView(Resource.Layout.City);
+			Title = ViewModel.Today.CityName;
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
