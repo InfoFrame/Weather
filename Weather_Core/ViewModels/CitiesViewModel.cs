@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using MvvmCross.Core.ViewModels;
+using Weather_Core.Interfaces;
 using Weather_Core.Models;
-using Weather_Core.Services;
 
 namespace Weather_Core.ViewModels
 {
@@ -11,8 +11,11 @@ namespace Weather_Core.ViewModels
 
 		public List<long> _cityIds = new List<long> { 2172797, 716963 };
 
-		public CitiesViewModel()
+		private IDataSource _dataSource;
+
+		public CitiesViewModel(IDataSource dataSource)
 		{
+			_dataSource = dataSource;
 			Refresh();
 		}
 
@@ -29,7 +32,7 @@ namespace Weather_Core.ViewModels
 			Todays = new MvxObservableCollection<Today>();
 			foreach (var cityId in _cityIds)
 			{
-				var today = await DataSource.Instance.GetToday(cityId);
+				var today = await _dataSource.GetToday(cityId);
 				Todays.Add(today);
 			}
 

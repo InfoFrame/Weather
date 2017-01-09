@@ -1,12 +1,26 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using Weather_Core.Interfaces;
 using Weather_Core.Models;
-using Weather_Core.Services;
 
 namespace Weather_Core.ViewModels
 {
 	public class CityViewModel : MvxViewModel
 	{
+
+		private IDataSource _dataSource;
+
+		public CityViewModel()
+		{
+			_dataSource = Mvx.Resolve<IDataSource>();
+		}
+
+		public void Init(Today today)
+		{
+			this.Today = today;
+			Refresh();
+		}
 
 		private Today _today;
 		public Today Today
@@ -22,15 +36,9 @@ namespace Weather_Core.ViewModels
 			set { _forecast = value; RaisePropertyChanged(() => Forecast); }
 		}
 
-		public void Init(Today today)
-		{
-			this.Today = today;
-			Refresh();
-		}
-
 		private async void Refresh()
 		{
-			Forecast = await DataSource.Instance.GetForecast(Today.CityId);
+			Forecast = await _dataSource.GetForecast(Today.CityId);
 		}
 
 	}

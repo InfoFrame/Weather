@@ -5,11 +5,12 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Realms;
+using Weather_Core.Interfaces;
 using Weather_Core.Models;
 
 namespace Weather_Core.Services
 {
-	public class DataSource
+	public class DataSource : IDataSource
 	{
 
 		private const string SERVER_URL = "http://api.openweathermap.org/data/2.5/";
@@ -18,19 +19,6 @@ namespace Weather_Core.Services
 		private Realm _realm;
 
 		private static DataSource instance;
-
-
-		public static DataSource Instance
-		{
-			get
-			{
-				if (instance == null)
-				{
-					instance = new DataSource();
-				}
-				return instance;
-			}
-		}
 
 		public DataSource()
 		{
