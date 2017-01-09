@@ -9,12 +9,25 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
         <TextView
-            local:MvxBind="Text CityName"
-            android:layout_width="wrap_content"
+            local:MvxBind="Text Day"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             local:MvxBind="Text WeatherDescription"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            local:MvxBind="Text TempHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            local:MvxBind="Text TempLow"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <Space
@@ -22,7 +35,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
     <Mvx.MvxImageView
-        local:MvxBind="ImageUrl ImageUrl"
+        local:MvxBind="ImageUrl IconUrl"
         android:background="@android:color/holo_red_light"
         android:layout_width="30dp"
         android:layout_height="30dp" />

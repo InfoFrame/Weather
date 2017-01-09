@@ -92,18 +92,6 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040003
-			public const int description = 2130968579;
-			
-			// aapt resource value: 0x7f040004
-			public const int listView = 2130968580;
-			
-			// aapt resource value: 0x7f040005
-			public const int name = 2130968581;
-			
-			// aapt resource value: 0x7f040002
-			public const int temp = 2130968578;
-			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -124,7 +112,7 @@ namespace Weather_Droid
 			public const int City = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ForecastDay_List_Item = 2130903042;
+			public const int forecast_day_list_item = 2130903042;
 			
 			// aapt resource value: 0x7f030003
 			public const int today_list_item = 2130903043;
