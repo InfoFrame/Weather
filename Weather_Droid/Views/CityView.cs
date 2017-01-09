@@ -15,7 +15,7 @@ using Weather_Core;
 using Weather_Core.Models;
 using Weather_Core.ViewModels;
 
-namespace Weather_Droid
+namespace Weather_Droid.Views
 {
 	[Activity(Label = "")]
 	public class CityView : MvxActivity

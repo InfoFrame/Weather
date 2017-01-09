@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using MvvmCross.Droid.Views;
 using Weather_Core.ViewModels;
 
-namespace Weather_Droid
+namespace Weather_Droid.Views
 {
 	[Activity(Label = "Weather", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class CitiesView : MvxActivity
