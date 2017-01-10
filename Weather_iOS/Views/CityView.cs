@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
@@ -33,8 +34,7 @@ namespace Weather_iOS.Views
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
-			this.CreateBinding(Title).To<CityViewModel>(vm => vm.Today.CityName).Apply();
+			this.CreateBinding(this).For(a => a.Title).To<CityViewModel>(vm => vm.Today.CityName).Apply();
 			this.CreateBinding(TempLabel).To<CityViewModel>(vm => vm.Today.CurrentTemp).Apply();
 			this.CreateBinding(WeatherDescriptionLabel).To<CityViewModel>(vm => vm.Today.WeatherDescription).Apply();
 
