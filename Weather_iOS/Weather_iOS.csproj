@@ -151,6 +151,7 @@
     <InterfaceDefinition Include="Views\CityCell.xib" />
     <InterfaceDefinition Include="Views\CityView.xib" />
     <InterfaceDefinition Include="Views\ForecastCell.xib" />
+    <InterfaceDefinition Include="Views\AddCityView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -179,6 +180,10 @@
     <Compile Include="Views\ForecastCell.cs" />
     <Compile Include="Views\ForecastCell.designer.cs">
       <DependentUpon>ForecastCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCityView.cs" />
+    <Compile Include="Views\AddCityView.designer.cs">
+      <DependentUpon>AddCityView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

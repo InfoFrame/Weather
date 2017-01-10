@@ -1,0 +1,107 @@
+{
+	"list": [{
+		"_id": 707860,
+		"name": "Hurzuf",
+		"country": "UA",
+		"coord": {
+			"lon": 34.283333,
+			"lat": 44.549999
+		}
+	}, {
+		"_id": 662284,
+		"name": "Zarnesti",
+		"country": "RO",
+		"coord": {
+			"lon": 25.299999,
+			"lat": 45.549999
+		}
+	}, {
+		"_id": 668882,
+		"name": "Ramnicelu",
+		"country": "RO",
+		"coord": {
+			"lon": 27.116671,
+			"lat": 45.366669
+		}
+	}, {
+		"_id": 565711,
+		"name": "Dolevo",
+		"country": "RU",
+		"coord": {
+			"lon": 36.615833,
+			"lat": 55.993332
+		}
+	}, {
+		"_id": 538585,
+		"name": "Kursakovo-Markovo",
+		"country": "RU",
+		"coord": {
+			"lon": 36.641666,
+			"lat": 55.978611
+		}
+	}, {
+		"_id": 562837,
+		"name": "Filatovo",
+		"country": "RU",
+		"coord": {
+			"lon": 36.677223,
+			"lat": 55.973057
+		}
+	}, {
+		"_id": 561278,
+		"name": "Glebovo",
+		"country": "RU",
+		"coord": {
+			"lon": 36.69389,
+			"lat": 55.955002
+		}
+	}, {
+		"_id": 571144,
+		"name": "Bukarevo",
+		"country": "RU",
+		"coord": {
+			"lon": 36.728889,
+			"lat": 55.952499
+		}
+	}, {
+		"_id": 569406,
+		"name": "Chepelëvo",
+		"country": "RU",
+		"coord": {
+			"lon": 37.491112,
+			"lat": 55.18222
+		}
+	}, {
+		"_id": 476368,
+		"name": "Vatutino",
+		"country": "RU",
+		"coord": {
+			"lon": 37.686668,
+			"lat": 55.879723
+		}
+	}, {
+		"_id": 547379,
+		"name": "Klyaz’ma",
+		"country": "RU",
+		"coord": {
+			"lon": 37.834721,
+			"lat": 55.979168
+		}
+	}, {
+		"_id": 503978,
+		"name": "Pushkino",
+		"country": "RU",
+		"coord": {
+			"lon": 37.833332,
+			"lat": 56.011112
+		}
+	}, {
+		"_id": 528211,
+		"name": "Mayskoye",
+		"country": "RU",
+		"coord": {
+			"lon": 37.916668,
+			"lat": 56.133331
+		}
+	}]
+}

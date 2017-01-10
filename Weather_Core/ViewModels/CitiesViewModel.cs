@@ -48,12 +48,26 @@ namespace Weather_Core.ViewModels
 			}
 		}
 
+		private MvxCommand _addCityCommand;
+		public MvxCommand AddCityCommand
+		{
+			get
+			{
+				_addCityCommand = _addCityCommand ?? new MvxCommand(AddCity);
+				return _addCityCommand;
+			}
+		}
+
 		private void ShowCity(Today today)
 		{
 			ShowViewModel<CityViewModel>(today);
 
 		}
 
+		private void AddCity()
+		{
+			ShowViewModel<AddCityViewModel>();
+		}
 
 	}
 }

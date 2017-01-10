@@ -43,12 +43,16 @@ namespace Weather_iOS.Views
 			base.ViewDidLoad();
 
 			Title = "Cities";
-
+			NavigationItem.RightBarButtonItem = new UIBarButtonItem("Add", UIBarButtonItemStyle.Plain, null);
 
 			var source = new TableSource(TableView, "CityCell", "Cell");
 
 			this.CreateBinding(source).To<CitiesViewModel>(vm => vm.Todays).Apply();
 			this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<CitiesViewModel>(vm => vm.ShowCityCommand).Apply();
+			this.CreateBinding(NavigationItem.RightBarButtonItem).To<CitiesViewModel>(vm => vm.AddCityCommand).Apply();
+				
+
+		//	this.CreateBinding(source).For(s => s.Addc).To<CitiesViewModel>(vm => vm.AddCityCommand).Apply();
 
 			TableView.Source = source;
 			TableView.ReloadData();
