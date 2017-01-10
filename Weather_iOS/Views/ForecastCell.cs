@@ -19,6 +19,7 @@ namespace Weather_iOS.Views
 			this.DelayBind(() =>
 			{
 				var binding = this.CreateBindingSet<ForecastCell, ForecastDay>();
+				binding.Bind(DateLabel).To(a => a.Day).WithConversion("UtcToStringConverter");
 				binding.Bind(DescriptionLabel).To(a => a.WeatherDescription);
 				binding.Bind(MaxLabel).To(a => a.TempHigh);
 				binding.Bind(MinLabel).To(a => a.TempLow);

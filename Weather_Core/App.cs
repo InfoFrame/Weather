@@ -14,6 +14,6 @@ namespace Weather_Core
 			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<CitiesViewModel>());
 			Mvx.RegisterSingleton<IDataSource>(() => new DataSource());
 			Mvx.RegisterSingleton<IPersistedSettings>(() => new PersistedSettings());
-}
+		}
 	}
 }
