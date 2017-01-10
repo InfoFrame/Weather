@@ -29,7 +29,7 @@ namespace Weather_iOS
 			var source = new MvxStandardTableViewSource(ResultsTableView, 
 			                                            UITableViewCellStyle.Default, 
 			                                            new NSString("Cell"), 
-			                                            "TitleText .");
+			                                            "TitleText Item2");
 			this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<AddCityViewModel>(vm => vm.CitySelectedCommand).Apply();
 			this.CreateBinding(source).To<AddCityViewModel>(vm => vm.FilteredCities).Apply();
 			this.CreateBinding(SearchBar).To<AddCityViewModel>(vm => vm.SearchString).TwoWay().Apply();

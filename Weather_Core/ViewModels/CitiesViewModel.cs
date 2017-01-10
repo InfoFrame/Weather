@@ -9,14 +9,13 @@ namespace Weather_Core.ViewModels
 	public class CitiesViewModel : MvxViewModel
 	{
 
-		public List<long> _cityIds = new List<long> { 2172797, 716963 };
-
 		private IDataSource _dataSource;
-
-		public CitiesViewModel(IDataSource dataSource)
+		private IPersistedSettings _persistedSettings;
+		public CitiesViewModel(IDataSource dataSource, IPersistedSettings persistedSettings)
 		{
 			_dataSource = dataSource;
-			Refresh();
+			_persistedSettings = persistedSettings;
+			RefreshCommand.Execute();
 		}
 
 		private MvxObservableCollection<Today> _todays;
@@ -26,16 +25,14 @@ namespace Weather_Core.ViewModels
 			set { _todays = value; RaisePropertyChanged(() => Todays); }
 		}
 
-
-		private async void Refresh()
+		private MvxCommand _refreshCommand;
+		public MvxCommand RefreshCommand
 		{
-			Todays = new MvxObservableCollection<Today>();
-			foreach (var cityId in _cityIds)
+			get
 			{
-				var today = await _dataSource.GetToday(cityId);
-				Todays.Add(today);
+				_refreshCommand = _refreshCommand ?? new MvxCommand(Refresh);
+				return _refreshCommand;
 			}
-
 		}
 
 		private MvxCommand<Today> _showCityCommand;
@@ -67,6 +64,18 @@ namespace Weather_Core.ViewModels
 		private void AddCity()
 		{
 			ShowViewModel<AddCityViewModel>();
+		}
+
+		private async void Refresh()
+		{
+			Todays = new MvxObservableCollection<Today>();
+			var cityIds = _persistedSettings.GetCityIds();
+			foreach (var cityId in cityIds)
+			{
+				var today = await _dataSource.GetToday(cityId);
+				Todays.Add(today);
+			}
+
 		}
 
 	}

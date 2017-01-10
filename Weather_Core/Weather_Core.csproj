@@ -37,6 +37,9 @@
     <Compile Include="Models\Today.cs" />
     <Compile Include="Interfaces\IDataSource.cs" />
     <Compile Include="ViewModels\AddCityViewModel.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Interfaces\IPersistedSettings.cs" />
+    <Compile Include="Services\PersistedSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -62,6 +65,12 @@
     </Reference>
     <Reference Include="DotNetCross.Memory.Unsafe">
       <HintPath>..\packages\DotNetCross.Memory.Unsafe.0.2.3.4\lib\netstandard1.0\DotNetCross.Memory.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.1.0\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.1.0\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

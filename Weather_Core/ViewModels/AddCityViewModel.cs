@@ -11,12 +11,12 @@ namespace Weather_Core.ViewModels
 {
 	public class AddCityViewModel : MvxViewModel
 	{
-		private IDataSource _dataSource;
+		private IPersistedSettings _persistedSettings;
 
-		private IList<string> _allCities;
+		private IList<Tuple<long, string>> _allCities;
 
-		private MvxObservableCollection<string> _filteredCities;
-		public MvxObservableCollection<string> FilteredCities
+		private MvxObservableCollection<Tuple<long, string>> _filteredCities;
+		public MvxObservableCollection<Tuple<long, string>> FilteredCities
 		{
 			get { return _filteredCities; }
 			set { _filteredCities = value; RaisePropertyChanged(() => FilteredCities); }
@@ -30,26 +30,26 @@ namespace Weather_Core.ViewModels
 		}
 
 
-		public AddCityViewModel(IDataSource dataSource)
+		public AddCityViewModel(IPersistedSettings persistedSettings)
 		{
-			_dataSource = dataSource;
+			_persistedSettings = persistedSettings;
 			LoadCities();
 			Refresh();
 		}
 
-		private MvxCommand<string> _citySelectedCommand;
-		public MvxCommand<string> CitySelectedCommand
+		private MvxCommand<Tuple<long, string>> _citySelectedCommand;
+		public MvxCommand<Tuple<long, string>> CitySelectedCommand
 		{
 			get
 			{
-				_citySelectedCommand = _citySelectedCommand ?? new MvxCommand<string>(CitySelected);
+				_citySelectedCommand = _citySelectedCommand ?? new MvxCommand<Tuple<long, string>>(CitySelected);
 				return _citySelectedCommand;
 			}
 		}
 
-		private async void Refresh()
+		private void Refresh()
 		{			
-			FilteredCities = new MvxObservableCollection<string>(_allCities.Where(x => x.IndexOf(SearchString, 0, StringComparison.CurrentCultureIgnoreCase) != -1));
+			FilteredCities = new MvxObservableCollection<Tuple<long, string>>(_allCities.Where(x => x.Item2.IndexOf(SearchString, 0, StringComparison.CurrentCultureIgnoreCase) != -1));
 		}
 
 		private void LoadCities()
@@ -57,16 +57,21 @@ namespace Weather_Core.ViewModels
 			Assembly assembly = Assembly.Load(new AssemblyName("Weather_Core"));
 			string jsonString = GetEmbeddedResourceString(assembly, "city.list.json");
 			dynamic json = JObject.Parse(jsonString);
-			_allCities = new List<string>();
+			_allCities = new List<Tuple<long, string>>();
 			foreach (var item in json["list"])
 			{
-				var cityName = item["name"].Value;
-				_allCities.Add(cityName);
+				long cityId = (long)item["_id"].Value;
+				string cityName = item["name"].Value as string;
+				_allCities.Add(Tuple.Create(cityId, cityName));
 			}
 		}
 
-		private void CitySelected(string cityName)
+		private void CitySelected(Tuple<long, string> city)
 		{
+			var persistedCityIds = _persistedSettings.GetCityIds().ToList();
+			persistedCityIds.Add(city.Item1);
+			_persistedSettings.SetCityIds(persistedCityIds);
+			Close(this);
 		}
 
 

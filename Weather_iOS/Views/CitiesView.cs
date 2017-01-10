@@ -57,7 +57,11 @@ namespace Weather_iOS.Views
 			TableView.Source = source;
 			TableView.ReloadData();
 		}
-
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+			ViewModel.RefreshCommand.Execute();
+		}
 
 	}
 }
