@@ -92,6 +92,9 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
+			// aapt resource value: 0x7f040002
+			public const int menu_add_city = 2130968578;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -106,16 +109,22 @@ namespace Weather_Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Cities = 2130903040;
+			public const int add_city_list_item = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int City = 2130903041;
+			public const int AddCity = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int forecast_day_list_item = 2130903042;
+			public const int Cities = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int today_list_item = 2130903043;
+			public const int City = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int forecast_day_list_item = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int today_list_item = 2130903045;
 			
 			static Layout()
 			{
@@ -123,6 +132,22 @@ namespace Weather_Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int add_city_menu = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

@@ -32,9 +32,34 @@ namespace Weather_Droid.Views
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
-			base.OnCreate(savedInstanceState);	
+			base.OnCreate(savedInstanceState);
 		}
 
+		protected override void OnResume()
+		{
+			base.OnResume();
+			ViewModel.RefreshCommand.Execute();
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.add_city_menu, menu);
+			return true;
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+
+				case Resource.Id.menu_add_city:
+
+					ViewModel.AddCityCommand.Execute();
+					return true;
+				default:
+					return base.OnOptionsItemSelected(item);
+			}
+		}
 	}
 }
 

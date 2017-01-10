@@ -92,6 +92,7 @@
     <Compile Include="Views\CitiesView.cs" />
     <Compile Include="Views\CityView.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Views\AddCityView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -111,11 +112,15 @@
     <AndroidResource Include="Resources\layout\today_list_item.axml" />
     <AndroidResource Include="Resources\layout\City.axml" />
     <AndroidResource Include="Resources\layout\forecast_day_list_item.axml" />
+    <AndroidResource Include="Resources\layout\AddCity.axml" />
+    <AndroidResource Include="Resources\layout\add_city_list_item.axml" />
+    <AndroidResource Include="Resources\menu\add_city_menu.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Bootstrap\" />
     <Folder Include="Views\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Weather_Core\Weather_Core.csproj">
