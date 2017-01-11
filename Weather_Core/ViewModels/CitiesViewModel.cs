@@ -15,10 +15,13 @@ namespace Weather_Core.ViewModels
 
 		private IDataSource _dataSource;
 		private IPersistedSettings _persistedSettings;
-		public CitiesViewModel(IDataSource dataSource, IPersistedSettings persistedSettings)
+		private IErrorHandler _errorHandler;
+
+		public CitiesViewModel(IDataSource dataSource, IPersistedSettings persistedSettings, IErrorHandler errorHandler)
 		{
 			_dataSource = dataSource;
 			_persistedSettings = persistedSettings;
+			_errorHandler = errorHandler;
 			RefreshCommand.Execute();
 		}
 
@@ -91,12 +94,19 @@ namespace Weather_Core.ViewModels
 
 		public async Task Refresh()
 		{
-			Todays = new MvxObservableCollection<Today>();
-			var cityIds = _persistedSettings.GetCityIds();
-			foreach (var cityId in cityIds)
+			try
 			{
-				var today = await _dataSource.GetToday(cityId);
-				Todays.Add(today);
+				Todays = new MvxObservableCollection<Today>();
+				var cityIds = _persistedSettings.GetCityIds();
+				foreach (var cityId in cityIds)
+				{
+					var today = await _dataSource.GetToday(cityId);
+					Todays.Add(today);
+				}
+			}
+			catch (Exception ex)
+			{
+				_errorHandler.HandleError(ex);
 			}
 		}
 

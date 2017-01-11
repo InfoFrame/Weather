@@ -11,10 +11,12 @@ namespace Weather_Core.ViewModels
 	{
 
 		private IDataSource _dataSource;
+		private IErrorHandler _errorHandler;
 
-		public CityViewModel()
+		public CityViewModel(IDataSource dataSource, IErrorHandler errorHandler)
 		{
-			_dataSource = Mvx.Resolve<IDataSource>();
+			_dataSource = dataSource;
+			_errorHandler = errorHandler;
 		}
 
 		public void Init(Today today)
@@ -39,8 +41,15 @@ namespace Weather_Core.ViewModels
 
 		public async Task Refresh()
 		{
-			Forecast = await _dataSource.GetForecast(Today.CityId);
-		}
+			try
+			{
+				Forecast = await _dataSource.GetForecast(Today.CityId);
+			}
+			catch (Exception ex)
+			{
+				_errorHandler.HandleError(ex);
+			}
 
+		}
 	}
 }

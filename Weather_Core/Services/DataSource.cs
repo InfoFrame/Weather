@@ -18,13 +18,9 @@ namespace Weather_Core.Services
 
 		private Realm _realm;
 
-		private static DataSource instance;
 
-		private IErrorHandler _errorHandler;
-
-		public DataSource(IErrorHandler errorHandler)
+		public DataSource()
 		{
-			_errorHandler = errorHandler;
 			_realm = Realm.GetInstance();
 		}
 
@@ -65,6 +61,6 @@ namespace Weather_Core.Services
 				}
 			}
 		}
-
 	}
+
 }
