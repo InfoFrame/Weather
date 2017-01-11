@@ -1,4 +1,5 @@
 ﻿using System;
+using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using Weather_Core.Interfaces;
@@ -12,8 +13,10 @@ namespace Weather_Core
 		public App()
 		{
 			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<CitiesViewModel>());
-			Mvx.RegisterSingleton<IDataSource>(() => new DataSource());
 			Mvx.RegisterSingleton<IPersistedSettings>(() => new PersistedSettings());
+			Mvx.RegisterSingleton<IErrorHandler>(() => new ErrorHandler());
+			Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
+			Mvx.RegisterType<IDataSource, DataSource>();
 		}
 	}
 }

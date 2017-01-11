@@ -20,8 +20,11 @@ namespace Weather_Core.Services
 
 		private static DataSource instance;
 
-		public DataSource()
+		private IErrorHandler _errorHandler;
+
+		public DataSource(IErrorHandler errorHandler)
 		{
+			_errorHandler = errorHandler;
 			_realm = Realm.GetInstance();
 		}
 
