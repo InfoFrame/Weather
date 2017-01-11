@@ -15,14 +15,24 @@ namespace Weather_iOS.Views
 
 		public class TableSource : MvxSimpleTableViewSource
 		{
+			CitiesView _citiesView;
 
-			public TableSource(UITableView tableView, string nibName, string cellIdentifier = null, NSBundle bundle = null) : base(tableView, nibName, cellIdentifier, bundle)
+			public TableSource(CitiesView citiesView, string nibName, string cellIdentifier = null, NSBundle bundle = null) : base(citiesView.TableView, nibName, cellIdentifier, bundle)
 			{
+				_citiesView = citiesView;
 			}
 
 			public override nfloat GetHeightForRow(UITableView tableView, Foundation.NSIndexPath indexPath)
 			{
 				return 60;
+			}
+
+			public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
+			{
+				if (editingStyle == UITableViewCellEditingStyle.Delete)
+				{
+					_citiesView.ViewModel.DeleteCityCommand.Execute(indexPath.Row);
+				}
 			}
 
 		}
@@ -44,8 +54,14 @@ namespace Weather_iOS.Views
 
 			Title = "Cities";
 			NavigationItem.RightBarButtonItem = new UIBarButtonItem("Add", UIBarButtonItemStyle.Plain, null);
+			NavigationItem.LeftBarButtonItem = new UIBarButtonItem("Edit", UIBarButtonItemStyle.Plain, null);
+			NavigationItem.LeftBarButtonItem.Clicked += (sender, e) =>
+			{
+				TableView.SetEditing(!TableView.Editing, true);
+				NavigationItem.LeftBarButtonItem.Title = TableView.Editing ? "Done" : "Edit";
+			};
 
-			var source = new TableSource(TableView, "CityCell", "Cell");
+			var source = new TableSource(this, "CityCell", "Cell");
 
 			this.CreateBinding(source).To<CitiesViewModel>(vm => vm.Todays).Apply();
 			this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<CitiesViewModel>(vm => vm.ShowCityCommand).Apply();

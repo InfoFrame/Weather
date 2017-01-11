@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using MvvmCross.Core.ViewModels;
 using Weather_Core.Interfaces;
 using Weather_Core.Models;
@@ -55,6 +56,16 @@ namespace Weather_Core.ViewModels
 			}
 		}
 
+		private MvxCommand<int> _deleteCityCommand;
+		public MvxCommand<int> DeleteCityCommand
+		{
+			get
+			{
+				_deleteCityCommand = _deleteCityCommand ?? new MvxCommand<int>(x => DeleteCity(x));
+				return _deleteCityCommand;
+			}
+		}
+
 		private void ShowCity(Today today)
 		{
 			ShowViewModel<CityViewModel>(today);
@@ -66,6 +77,15 @@ namespace Weather_Core.ViewModels
 			ShowViewModel<AddCityViewModel>();
 		}
 
+		private void DeleteCity(int index)
+		{
+			var cityIds = _persistedSettings.GetCityIds();
+			var newCityIds = cityIds.ToList();
+			newCityIds.RemoveAt(index);
+			_persistedSettings.SetCityIds(newCityIds);
+			Refresh();
+		}
+
 		private async void Refresh()
 		{
 			Todays = new MvxObservableCollection<Today>();
@@ -75,7 +95,6 @@ namespace Weather_Core.ViewModels
 				var today = await _dataSource.GetToday(cityId);
 				Todays.Add(today);
 			}
-
 		}
 
 	}
