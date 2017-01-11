@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using Weather_Core.Interfaces;
 using Weather_Core.Models;
@@ -31,7 +32,7 @@ namespace Weather_Core.ViewModels
 		{
 			get
 			{
-				_refreshCommand = _refreshCommand ?? new MvxCommand(Refresh);
+				_refreshCommand = _refreshCommand ?? new MvxCommand(async () => await Refresh());
 				return _refreshCommand;
 			}
 		}
@@ -86,7 +87,7 @@ namespace Weather_Core.ViewModels
 			Refresh();
 		}
 
-		private async void Refresh()
+		public async Task Refresh()
 		{
 			Todays = new MvxObservableCollection<Today>();
 			var cityIds = _persistedSettings.GetCityIds();

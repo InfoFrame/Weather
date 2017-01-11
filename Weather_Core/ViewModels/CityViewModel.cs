@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using Weather_Core.Interfaces;
@@ -36,7 +37,7 @@ namespace Weather_Core.ViewModels
 			set { _forecast = value; RaisePropertyChanged(() => Forecast); }
 		}
 
-		private async void Refresh()
+		public async Task Refresh()
 		{
 			Forecast = await _dataSource.GetForecast(Today.CityId);
 		}

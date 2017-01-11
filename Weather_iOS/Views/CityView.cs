@@ -31,6 +31,12 @@ namespace Weather_iOS.Views
 		{
 		}
 
+		public new CityViewModel ViewModel
+		{
+			get { return (CityViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
@@ -43,6 +49,15 @@ namespace Weather_iOS.Views
 			this.CreateBinding(source).To<CityViewModel>(vm => vm.Forecast.Forecasts).Apply();
 
 			TableView.Source = source;
+
+			var refreshControl = new UIRefreshControl();
+			refreshControl.ValueChanged += async (sender, e) =>
+			{
+				await ViewModel.Refresh();
+				refreshControl.EndRefreshing();
+			};
+			TableView.Add(refreshControl);
+
 			TableView.ReloadData();
 		}
 

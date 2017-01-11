@@ -71,6 +71,13 @@ namespace Weather_iOS.Views
 		//	this.CreateBinding(source).For(s => s.Addc).To<CitiesViewModel>(vm => vm.AddCityCommand).Apply();
 
 			TableView.Source = source;
+			var refreshControl = new UIRefreshControl();
+			refreshControl.ValueChanged += async (sender, e) =>
+			{
+				await ViewModel.Refresh();
+				refreshControl.EndRefreshing();
+			};
+			TableView.Add(refreshControl);
 			TableView.ReloadData();
 		}
 		public override void ViewWillAppear(bool animated)
