@@ -18,12 +18,8 @@
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <Mvx.MvxListView
-        gravity="right"
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <com.syncfusion.charts.SfChart
+        android:id="@+id/Chart"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        local:MvxItemTemplate="@layout/forecast_day_list_item"
-        local:MvxBind="ItemsSource Forecast.Forecasts" />
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -141,6 +141,18 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f050010
 			public const int design_snackbar_out = 2131034128;
 			
+			// aapt resource value: 0x7f050011
+			public const int fadein = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int fadeout = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int scale_in = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int scale_out = 2131034132;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -2124,14 +2136,17 @@ namespace Weather_Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f0a007f
+			public const int Chart = 2131361919;
+			
 			// aapt resource value: 0x7f0a000b
 			public const int MvvmCrossTagId = 2131361803;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int MvxBindingTagUnique = 2131361804;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int action0 = 2131361918;
+			// aapt resource value: 0x7f0a008e
+			public const int action0 = 2131361934;
 			
 			// aapt resource value: 0x7f0a0060
 			public const int action_bar = 2131361888;
@@ -2157,8 +2172,8 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0061
 			public const int action_context_bar = 2131361889;
 			
-			// aapt resource value: 0x7f0a0082
-			public const int action_divider = 2131361922;
+			// aapt resource value: 0x7f0a0092
+			public const int action_divider = 2131361938;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -2193,17 +2208,23 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0012
 			public const int auto = 2131361810;
 			
+			// aapt resource value: 0x7f0a0077
+			public const int axisLayout = 2131361911;
+			
 			// aapt resource value: 0x7f0a0038
 			public const int beginning = 2131361848;
 			
 			// aapt resource value: 0x7f0a0013
 			public const int bottom = 2131361811;
 			
+			// aapt resource value: 0x7f0a009c
+			public const int bottom_labels = 2131361948;
+			
 			// aapt resource value: 0x7f0a0049
 			public const int buttonPanel = 2131361865;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int cancel_action = 2131361919;
+			// aapt resource value: 0x7f0a008f
+			public const int cancel_action = 2131361935;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int center = 2131361812;
@@ -2214,11 +2235,17 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0016
 			public const int center_vertical = 2131361814;
 			
+			// aapt resource value: 0x7f0a0071
+			public const int chartAreaLayout = 2131361905;
+			
+			// aapt resource value: 0x7f0a0070
+			public const int chartTitle = 2131361904;
+			
 			// aapt resource value: 0x7f0a0057
 			public const int checkbox = 2131361879;
 			
-			// aapt resource value: 0x7f0a0085
-			public const int chronometer = 2131361925;
+			// aapt resource value: 0x7f0a0095
+			public const int chronometer = 2131361941;
 			
 			// aapt resource value: 0x7f0a0020
 			public const int clip_horizontal = 2131361824;
@@ -2229,6 +2256,9 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a003b
 			public const int collapseActionView = 2131361851;
 			
+			// aapt resource value: 0x7f0a009d
+			public const int content = 2131361949;
+			
 			// aapt resource value: 0x7f0a004f
 			public const int contentPanel = 2131361871;
 			
@@ -2238,26 +2268,29 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0054
 			public const int customPanel = 2131361876;
 			
+			// aapt resource value: 0x7f0a0075
+			public const int dataMarkerLayout = 2131361909;
+			
 			// aapt resource value: 0x7f0a005e
 			public const int decor_content_parent = 2131361886;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int default_activity_button = 2131361861;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int design_bottom_sheet = 2131361905;
+			// aapt resource value: 0x7f0a0081
+			public const int design_bottom_sheet = 2131361921;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int design_menu_item_action_area = 2131361912;
+			// aapt resource value: 0x7f0a0088
+			public const int design_menu_item_action_area = 2131361928;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int design_menu_item_action_area_stub = 2131361911;
+			// aapt resource value: 0x7f0a0087
+			public const int design_menu_item_action_area_stub = 2131361927;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int design_menu_item_text = 2131361910;
+			// aapt resource value: 0x7f0a0086
+			public const int design_menu_item_text = 2131361926;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int design_navigation_view = 2131361909;
+			// aapt resource value: 0x7f0a0085
+			public const int design_navigation_view = 2131361925;
 			
 			// aapt resource value: 0x7f0a0030
 			public const int disableHome = 2131361840;
@@ -2268,8 +2301,8 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0017
 			public const int end = 2131361815;
 			
-			// aapt resource value: 0x7f0a008a
-			public const int end_padder = 2131361930;
+			// aapt resource value: 0x7f0a009a
+			public const int end_padder = 2131361946;
 			
 			// aapt resource value: 0x7f0a000d
 			public const int enterAlways = 2131361805;
@@ -2298,6 +2331,12 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0027
 			public const int @fixed = 2131361831;
 			
+			// aapt resource value: 0x7f0a0072
+			public const int gridLineLayout = 2131361906;
+			
+			// aapt resource value: 0x7f0a009e
+			public const int gridLinesLayout = 2131361950;
+			
 			// aapt resource value: 0x7f0a0005
 			public const int home = 2131361797;
 			
@@ -2307,26 +2346,44 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0047
 			public const int icon = 2131361863;
 			
+			// aapt resource value: 0x7f0a007c
+			public const int iconView = 2131361916;
+			
 			// aapt resource value: 0x7f0a003c
 			public const int ifRoom = 2131361852;
 			
 			// aapt resource value: 0x7f0a0044
 			public const int image = 2131361860;
 			
-			// aapt resource value: 0x7f0a0089
-			public const int info = 2131361929;
+			// aapt resource value: 0x7f0a0099
+			public const int info = 2131361945;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int item_touch_helper_previous_elevation = 2131361802;
 			
+			// aapt resource value: 0x7f0a007d
+			public const int label = 2131361917;
+			
 			// aapt resource value: 0x7f0a0019
 			public const int left = 2131361817;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int line1 = 2131361923;
+			// aapt resource value: 0x7f0a0079
+			public const int legendHeader = 2131361913;
 			
-			// aapt resource value: 0x7f0a0087
-			public const int line3 = 2131361927;
+			// aapt resource value: 0x7f0a007b
+			public const int legendItemsLayout = 2131361915;
+			
+			// aapt resource value: 0x7f0a007a
+			public const int legendScrollView = 2131361914;
+			
+			// aapt resource value: 0x7f0a0078
+			public const int legendViewGroup = 2131361912;
+			
+			// aapt resource value: 0x7f0a0093
+			public const int line1 = 2131361939;
+			
+			// aapt resource value: 0x7f0a0097
+			public const int line3 = 2131361943;
 			
 			// aapt resource value: 0x7f0a002e
 			public const int listMode = 2131361838;
@@ -2334,23 +2391,23 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0046
 			public const int list_item = 2131361862;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int list_view = 2131361903;
+			// aapt resource value: 0x7f0a007e
+			public const int list_view = 2131361918;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int loadingImage = 2131361916;
+			// aapt resource value: 0x7f0a008c
+			public const int loadingImage = 2131361932;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int loadingProgressBar = 2131361914;
+			// aapt resource value: 0x7f0a008a
+			public const int loadingProgressBar = 2131361930;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int loadingProgressWheel = 2131361917;
+			// aapt resource value: 0x7f0a008d
+			public const int loadingProgressWheel = 2131361933;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int media_actions = 2131361921;
+			// aapt resource value: 0x7f0a0091
+			public const int media_actions = 2131361937;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int menu_add_city = 2131361931;
+			// aapt resource value: 0x7f0a00a0
+			public const int menu_add_city = 2131361952;
 			
 			// aapt resource value: 0x7f0a0039
 			public const int middle = 2131361849;
@@ -2361,8 +2418,8 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0029
 			public const int multiply = 2131361833;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int navigation_header_container = 2131361908;
+			// aapt resource value: 0x7f0a0084
+			public const int navigation_header_container = 2131361924;
 			
 			// aapt resource value: 0x7f0a003d
 			public const int never = 2131361853;
@@ -2393,6 +2450,9 @@ namespace Weather_Droid
 			
 			// aapt resource value: 0x7f0a001a
 			public const int right = 2131361818;
+			
+			// aapt resource value: 0x7f0a006f
+			public const int rootLayout = 2131361903;
 			
 			// aapt resource value: 0x7f0a002a
 			public const int screen = 2131361834;
@@ -2445,6 +2505,9 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a006e
 			public const int select_dialog_listview = 2131361902;
 			
+			// aapt resource value: 0x7f0a0074
+			public const int seriesLayout = 2131361908;
+			
 			// aapt resource value: 0x7f0a0058
 			public const int shortcut = 2131361880;
 			
@@ -2457,11 +2520,11 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a0034
 			public const int showTitle = 2131361844;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int snackbar_action = 2131361907;
+			// aapt resource value: 0x7f0a0083
+			public const int snackbar_action = 2131361923;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int snackbar_text = 2131361906;
+			// aapt resource value: 0x7f0a0082
+			public const int snackbar_text = 2131361922;
 			
 			// aapt resource value: 0x7f0a0011
 			public const int snap = 2131361809;
@@ -2484,8 +2547,11 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a001b
 			public const int start = 2131361819;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int status_bar_latest_event_content = 2131361920;
+			// aapt resource value: 0x7f0a0090
+			public const int status_bar_latest_event_content = 2131361936;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int stripLinesLayout = 2131361907;
 			
 			// aapt resource value: 0x7f0a005a
 			public const int submenuarrow = 2131361882;
@@ -2496,23 +2562,29 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a002f
 			public const int tabMode = 2131361839;
 			
-			// aapt resource value: 0x7f0a0088
-			public const int text = 2131361928;
+			// aapt resource value: 0x7f0a0076
+			public const int technicalIndicatorLayout = 2131361910;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int text2 = 2131361926;
+			// aapt resource value: 0x7f0a0098
+			public const int text = 2131361944;
+			
+			// aapt resource value: 0x7f0a0096
+			public const int text2 = 2131361942;
 			
 			// aapt resource value: 0x7f0a0052
 			public const int textSpacerNoButtons = 2131361874;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int textViewStatus = 2131361915;
+			// aapt resource value: 0x7f0a008b
+			public const int textViewStatus = 2131361931;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int text_input_password_toggle = 2131361913;
+			// aapt resource value: 0x7f0a0089
+			public const int text_input_password_toggle = 2131361929;
 			
-			// aapt resource value: 0x7f0a0084
-			public const int time = 2131361924;
+			// aapt resource value: 0x7f0a009f
+			public const int thumbLayout = 2131361951;
+			
+			// aapt resource value: 0x7f0a0094
+			public const int time = 2131361940;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int title = 2131361864;
@@ -2526,8 +2598,11 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0a004c
 			public const int topPanel = 2131361868;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int touch_outside = 2131361904;
+			// aapt resource value: 0x7f0a009b
+			public const int top_labels = 2131361947;
+			
+			// aapt resource value: 0x7f0a0080
+			public const int touch_outside = 2131361920;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int up = 2131361801;
@@ -2676,100 +2751,112 @@ namespace Weather_Droid
 			public const int AddCity = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int Cities = 2130968604;
+			public const int chart_layout = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int City = 2130968605;
+			public const int chart_legend = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_bottom_sheet_dialog = 2130968606;
+			public const int chart_legend_item = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_snackbar = 2130968607;
+			public const int Cities = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_layout_snackbar_include = 2130968608;
+			public const int City = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_layout_tab_icon = 2130968609;
+			public const int design_bottom_sheet_dialog = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_layout_tab_text = 2130968610;
+			public const int design_layout_snackbar = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_menu_item_action_area = 2130968611;
+			public const int design_layout_snackbar_include = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item = 2130968612;
+			public const int design_layout_tab_icon = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_item_header = 2130968613;
+			public const int design_layout_tab_text = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_item_separator = 2130968614;
+			public const int design_menu_item_action_area = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_navigation_item_subheader = 2130968615;
+			public const int design_navigation_item = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int design_navigation_menu = 2130968616;
+			public const int design_navigation_item_header = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int design_navigation_menu_item = 2130968617;
+			public const int design_navigation_item_separator = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int design_text_input_password_icon = 2130968618;
+			public const int design_navigation_item_subheader = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int forecast_day_list_item = 2130968619;
+			public const int design_navigation_menu = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int loading = 2130968620;
+			public const int design_navigation_menu_item = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int loadingimage = 2130968621;
+			public const int design_text_input_password_icon = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int loadingprogress = 2130968622;
+			public const int forecast_day_list_item = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_media_action = 2130968623;
+			public const int loading = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_cancel_action = 2130968624;
+			public const int loadingimage = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media = 2130968625;
+			public const int loadingprogress = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media_narrow = 2130968626;
+			public const int notification_media_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_lines = 2130968627;
+			public const int notification_media_cancel_action = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_media = 2130968628;
+			public const int notification_template_big_media = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_part_chronometer = 2130968629;
+			public const int notification_template_big_media_narrow = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_part_time = 2130968630;
+			public const int notification_template_lines = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int select_dialog_item_material = 2130968631;
+			public const int notification_template_media = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int select_dialog_multichoice_material = 2130968632;
+			public const int notification_template_part_chronometer = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int select_dialog_singlechoice_material = 2130968633;
+			public const int notification_template_part_time = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int support_simple_spinner_dropdown_item = 2130968634;
+			public const int range_navigator_layout = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int today_list_item = 2130968635;
+			public const int select_dialog_item_material = 2130968635;
+			
+			// aapt resource value: 0x7f04003c
+			public const int select_dialog_multichoice_material = 2130968636;
+			
+			// aapt resource value: 0x7f04003d
+			public const int select_dialog_singlechoice_material = 2130968637;
+			
+			// aapt resource value: 0x7f04003e
+			public const int support_simple_spinner_dropdown_item = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int today_list_item = 2130968639;
 			
 			static Layout()
 			{
@@ -2909,8 +2996,8 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0b0015
 			public const int abc_toolbar_collapse_description = 2131427349;
 			
-			// aapt resource value: 0x7f0b0026
-			public const int app_name = 2131427366;
+			// aapt resource value: 0x7f0b002e
+			public const int app_name = 2131427374;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int appbar_scrolling_view_behavior = 2131427328;
@@ -2921,17 +3008,41 @@ namespace Weather_Droid
 			// aapt resource value: 0x7f0b0002
 			public const int character_counter_pattern = 2131427330;
 			
-			// aapt resource value: 0x7f0b0025
-			public const int hello = 2131427365;
+			// aapt resource value: 0x7f0b002d
+			public const int hello = 2131427373;
+			
+			// aapt resource value: 0x7f0b002c
+			public const int library_name = 2131427372;
 			
 			// aapt resource value: 0x7f0b0024
-			public const int library_name = 2131427364;
+			public const int q = 2131427364;
+			
+			// aapt resource value: 0x7f0b0025
+			public const int quarter = 2131427365;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int search_menu_title = 2131427350;
 			
+			// aapt resource value: 0x7f0b0026
+			public const int sfchart_close_label = 2131427366;
+			
+			// aapt resource value: 0x7f0b0027
+			public const int sfchart_high_label = 2131427367;
+			
+			// aapt resource value: 0x7f0b0028
+			public const int sfchart_low_label = 2131427368;
+			
+			// aapt resource value: 0x7f0b0029
+			public const int sfchart_open_label = 2131427369;
+			
 			// aapt resource value: 0x7f0b0017
 			public const int status_bar_notification_info_overflow = 2131427351;
+			
+			// aapt resource value: 0x7f0b002a
+			public const int w = 2131427370;
+			
+			// aapt resource value: 0x7f0b002b
+			public const int week = 2131427371;
 			
 			static String()
 			{

@@ -105,8 +105,6 @@ namespace Weather_iOS.Views
 			}
 		}
 
-
-
 		public CityView() : base("CityView", null)
 		{
 		}
@@ -163,7 +161,7 @@ namespace Weather_iOS.Views
 			*/
 		}
 
-		public void UpdateChart()
+		private void UpdateChart()
 		{
 			if (ViewModel.Forecast != null)
 			{
