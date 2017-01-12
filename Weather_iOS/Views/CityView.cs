@@ -29,8 +29,6 @@ namespace Weather_iOS.Views
 
 		}
 
-
-
 		public class ChartDataModel : SFChartDataSource
 		{
 			NSMutableArray highTemperature;
@@ -142,23 +140,6 @@ namespace Weather_iOS.Views
 					UpdateChart();
 				}
 			};
-			/*
-			var source = new TableSource(TableView, "ForecastCell", "Cell");
-
-			this.CreateBinding(source).To<CityViewModel>(vm => vm.Forecast.Forecasts).Apply();
-
-			TableView.Source = source;
-
-			var refreshControl = new UIRefreshControl();
-			refreshControl.ValueChanged += async (sender, e) =>
-			{
-				await ViewModel.Refresh();
-				refreshControl.EndRefreshing();
-			};
-			TableView.Add(refreshControl);
-
-			TableView.ReloadData();
-			*/
 		}
 
 		private void UpdateChart()

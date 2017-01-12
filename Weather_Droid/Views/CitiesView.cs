@@ -69,15 +69,14 @@ namespace Weather_Droid.Views
 		{
 			switch (item.ItemId)
 			{
-
 				case Resource.Id.menu_add_city:
-
 					ViewModel.AddCityCommand.Execute();
 					return true;
 				default:
 					return base.OnOptionsItemSelected(item);
 			}
 		}
+
 	}
 }
 

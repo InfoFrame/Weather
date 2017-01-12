@@ -49,7 +49,6 @@ namespace Weather_Droid.Views
 				lowTemperature.Add(new ChartDataPoint(day, low));
 			}
 
-
 		}
 
 		public new CityViewModel ViewModel
@@ -72,12 +71,9 @@ namespace Weather_Droid.Views
 			base.OnCreate(savedInstanceState);
 
 			Chart = FindViewById<SfChart>(Resource.Id.Chart);
-			//Adding Primary Axis for the Chart.
 			CategoryAxis primaryAxis = new CategoryAxis();
 			primaryAxis.Title.Text = "Day";
 			Chart.PrimaryAxis = primaryAxis;
-
-			//Adding Secondary Axis for the Chart.
 			NumericalAxis secondaryAxis = new NumericalAxis();
 			secondaryAxis.Title.Text = "Temperature";
 			Chart.SecondaryAxis = secondaryAxis;
@@ -99,17 +95,12 @@ namespace Weather_Droid.Views
 			if (ViewModel.Forecast != null)
 			{
 				ChartDataModel dataModel = new ChartDataModel(ViewModel.Forecast);
-
-
-				//Adding the SplineSeries to the chart for high temperature
 				Chart.Series.Add(new SplineSeries()
 				{
 					DataSource = dataModel.highTemperature,
 					Color = Color.Red,
 					Label = "High"
 				});
-
-				//Adding the SplineSeries to the chart for low temperature
 				Chart.Series.Add(new SplineSeries()
 				{
 					DataSource = dataModel.lowTemperature,
@@ -121,8 +112,6 @@ namespace Weather_Droid.Views
 
 		private static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
 		{
-			// Unix timestamp is seconds past epoch
-
 			System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
 			dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
 			return dtDateTime;
