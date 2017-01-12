@@ -7,9 +7,15 @@ namespace Weather_Core.Services
 {
 	public class ErrorHandler : IErrorHandler
 	{
+		IUserDialogs _userDialogs;
+		public ErrorHandler(IUserDialogs userDialogs)
+		{
+			_userDialogs = userDialogs;
+		}
+
 		public void HandleError(Exception ex)
 		{
-			Mvx.Resolve<IUserDialogs>().Alert("Error", ex.Message);
+			_userDialogs.Alert("Error", ex.Message);
 		}
 	}
 }

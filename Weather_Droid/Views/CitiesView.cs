@@ -11,6 +11,9 @@ using Android.Net;
 using System.Threading.Tasks;
 using MvvmCross.Droid.Views;
 using Weather_Core.ViewModels;
+using Acr.UserDialogs;
+using MvvmCross.Platform;
+using MvvmCross.Binding.Droid.Views;
 
 namespace Weather_Droid.Views
 {
@@ -32,7 +35,22 @@ namespace Weather_Droid.Views
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
+			UserDialogs.Init(this);
 			base.OnCreate(savedInstanceState);
+			var listView = FindViewById<MvxListView>(Resource.Id.list_view);
+			RegisterForContextMenu(listView);
+		}
+		public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
+		{
+			base.OnCreateContextMenu(menu, v, menuInfo);
+			menu.Add("Delete?");
+		}
+
+		public override bool OnContextItemSelected(IMenuItem item)
+		{
+			AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.MenuInfo;
+			ViewModel.DeleteCityCommand.Execute(info.Position);
+			return true;
 		}
 
 		protected override void OnResume()
