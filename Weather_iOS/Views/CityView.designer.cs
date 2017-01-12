@@ -5,6 +5,7 @@
 // Manual changes to this file will not be maintained.
 //
 using Foundation;
+using Syncfusion.SfChart;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
@@ -16,7 +17,7 @@ namespace Weather_iOS.Views
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView TableView { get; set; }
+        Syncfusion.SfChart.iOS.SFChart Chart { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,9 +29,9 @@ namespace Weather_iOS.Views
 
         void ReleaseDesignerOutlets ()
         {
-            if (TableView != null) {
-                TableView.Dispose ();
-                TableView = null;
+            if (Chart != null) {
+                Chart.Dispose ();
+                Chart = null;
             }
 
             if (TempLabel != null) {
