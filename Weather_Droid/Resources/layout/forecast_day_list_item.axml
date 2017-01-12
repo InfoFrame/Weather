@@ -35,8 +35,8 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
     <Mvx.MvxImageView
-        local:MvxBind="ImageUrl IconUrl"
-        android:background="@android:color/holo_red_light"
-        android:layout_width="30dp"
-        android:layout_height="30dp" />
+        local:MvxBind="ImageUrl ImageUrl"
+        android:layout_gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
 </LinearLayout>
