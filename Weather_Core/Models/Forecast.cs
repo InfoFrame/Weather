@@ -17,7 +17,7 @@ namespace Weather_Core.Models
 			dynamic json = JObject.Parse(jsonString);
 			Forecast forecast = new Forecast();
 			foreach (var item in json["list"])
-			{
+			{ // TODO: refactor deserialization to ForecastDay
 				var forecastDay = new ForecastDay
 				{
 					CityId = json["city"]["id"].Value,

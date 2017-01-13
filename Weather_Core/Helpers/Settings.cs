@@ -26,7 +26,7 @@ namespace Weather_Core.Helpers
 
     #endregion
 
-
+	// TODO: Use realm?
     public static string GeneralSettings
     {
       get

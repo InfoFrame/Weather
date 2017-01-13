@@ -26,7 +26,7 @@ namespace Weather_Droid.Views
 
 		public class ChartDataModel
 		{
-			public ObservableArrayList highTemperature;
+			public ObservableArrayList highTemperature; // TODO: use converter
 			public ObservableArrayList lowTemperature;
 
 			Forecast _forecast;
@@ -61,10 +61,10 @@ namespace Weather_Droid.Views
 		{
 			base.OnViewModelSet();
 			SetContentView(Resource.Layout.City);
-			Title = ViewModel.Today.CityName;
+			Title = ViewModel.Today.CityName; // TODO?
 		}
 
-		SfChart Chart;
+		SfChart Chart; // TODO convention
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{

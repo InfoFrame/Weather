@@ -14,7 +14,7 @@ namespace Weather_Core.Models
 		public string IconUrl { get; set; }
 		public long Day { get; set; }
 
-
+		// TODO: wrong place (converter?)
 		private const string ImageUrlFormat = "http://openweathermap.org/img/w/{0}.png";
 
 		public string ImageUrl		{

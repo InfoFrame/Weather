@@ -10,7 +10,7 @@ namespace Weather_Core.Services
 	{
 
 		private const string CitiIdsKey = "Cities";
-
+		// TODO: -> property
 		public void SetCityIds(IEnumerable<long> cities)
 		{
 			var value = string.Join(",", cities);

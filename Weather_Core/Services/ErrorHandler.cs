@@ -13,6 +13,7 @@ namespace Weather_Core.Services
 			_userDialogs = userDialogs;
 		}
 
+		// TODO: localization
 		public void HandleError(Exception ex)
 		{
 			_userDialogs.Alert("Error", ex.Message);

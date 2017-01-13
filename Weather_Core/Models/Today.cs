@@ -16,6 +16,7 @@ namespace Weather_Core.Models
 		public double CurrentTemp { get; set; }
 		public long TimeStamp { get; set; }
 
+		// TODO: wrong place (converter?)
 		private const string ImageUrlFormat = "http://openweathermap.org/img/w/{0}.png";
 
 		public string ImageUrl 

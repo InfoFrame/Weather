@@ -37,6 +37,8 @@ namespace Weather_Core.ViewModels
 			Refresh();
 		}
 
+		// TODO init?
+
 		private MvxCommand<Tuple<long, string>> _citySelectedCommand;
 		public MvxCommand<Tuple<long, string>> CitySelectedCommand
 		{
@@ -71,7 +73,7 @@ namespace Weather_Core.ViewModels
 			var persistedCityIds = _persistedSettings.GetCityIds().ToList();
 			persistedCityIds.Add(city.Item1);
 			_persistedSettings.SetCityIds(persistedCityIds);
-			Close(this);
+			Close(this); // TODO destroys?
 		}
 
 
@@ -118,6 +120,8 @@ namespace Weather_Core.ViewModels
 				return memoryStream.ToArray();
 			}
 		}
+
+		// TODO cleanup
 
 		/// <summary>
 		/// Attempts to find and return the given resource from within the specified assembly.

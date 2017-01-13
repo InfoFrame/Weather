@@ -30,7 +30,7 @@ namespace Weather_Droid.Views
 		protected override void OnViewModelSet()
 		{
 			base.OnViewModelSet();
-			SetContentView(Resource.Layout.Cities);
+			SetContentView(Resource.Layout.Cities);// TODO naming convention
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -56,7 +56,7 @@ namespace Weather_Droid.Views
 		protected override void OnResume()
 		{
 			base.OnResume();
-			ViewModel.RefreshCommand.Execute();
+			ViewModel.RefreshCommand.Execute(); // TODO: refresh twice on startup
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
