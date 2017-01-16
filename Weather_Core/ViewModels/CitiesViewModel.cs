@@ -22,6 +22,10 @@ namespace Weather_Core.ViewModels
 			_dataSource = dataSource;
 			_persistedSettings = persistedSettings;
 			_errorHandler = errorHandler;
+		}
+
+		public void Init()
+		{
 			RefreshCommand.Execute();
 		}
 
@@ -37,7 +41,7 @@ namespace Weather_Core.ViewModels
 		{
 			get
 			{
-				_refreshCommand = _refreshCommand ?? new MvxCommand(Refresh);
+				_refreshCommand = _refreshCommand ?? new MvxCommand(() => Refresh());
 				return _refreshCommand;
 			}
 		}
@@ -92,7 +96,7 @@ namespace Weather_Core.ViewModels
 			Refresh();
 		}
 
-		public async void Refresh()
+		public async Task Refresh()
 		{
 			try
 			{
