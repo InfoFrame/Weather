@@ -73,9 +73,9 @@ namespace Weather_Core.ViewModels
 
 		private async void CitySelected(Tuple<long, string> city)
 		{
-			var persistedCityIds = _persistedSettings.GetCityIds().ToList();
+			var persistedCityIds = _persistedSettings.CityIds.ToList();
 			persistedCityIds.Add(city.Item1);
-			_persistedSettings.SetCityIds(persistedCityIds);
+			_persistedSettings.CityIds = persistedCityIds;
 			Close(this);
 		}
 

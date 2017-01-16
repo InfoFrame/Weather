@@ -5,8 +5,6 @@ namespace Weather_Core.Interfaces
 {
 	public interface IPersistedSettings
 	{
-
-		void SetCityIds(IEnumerable<long> cities);
-		IEnumerable<long> GetCityIds();
+		IEnumerable<long> CityIds { get; set;}
 	}
 }

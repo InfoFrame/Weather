@@ -89,10 +89,10 @@ namespace Weather_Core.ViewModels
 
 		private void DeleteCity(int index)
 		{
-			var cityIds = _persistedSettings.GetCityIds();
+			var cityIds = _persistedSettings.CityIds;
 			var newCityIds = cityIds.ToList();
 			newCityIds.RemoveAt(index);
-			_persistedSettings.SetCityIds(newCityIds);
+			_persistedSettings.CityIds = newCityIds;
 			Refresh();
 		}
 
@@ -101,7 +101,7 @@ namespace Weather_Core.ViewModels
 			try
 			{
 				Todays = new MvxObservableCollection<Today>();
-				var cityIds = _persistedSettings.GetCityIds();
+				var cityIds = _persistedSettings.CityIds;
 				foreach (var cityId in cityIds)
 				{
 					var today = await _dataSource.GetTodayAsync(cityId);

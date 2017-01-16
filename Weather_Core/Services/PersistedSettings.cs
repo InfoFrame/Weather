@@ -10,23 +10,24 @@ namespace Weather_Core.Services
 	{
 
 		private const string CitiIdsKey = "Cities";
-		// TODO: -> property
-		public void SetCityIds(IEnumerable<long> cities)
+		public IEnumerable<long> CityIds
 		{
-			var value = string.Join(",", cities);
-			CrossSettings.Current.AddOrUpdateValue<string>(CitiIdsKey, value);
-		}
-
-		public IEnumerable<long> GetCityIds()
-		{
-			var citiesString = CrossSettings.Current.GetValueOrDefault<string>(CitiIdsKey, string.Empty);
-			if (string.IsNullOrEmpty(citiesString))
+			get
 			{
-				return new List<long>();
+				var citiesString = CrossSettings.Current.GetValueOrDefault<string>(CitiIdsKey, string.Empty);
+				if (string.IsNullOrEmpty(citiesString))
+				{
+					return new List<long>();
+				}
+				else {
+					var result = citiesString.Split(',').Select(n => Convert.ToInt64(n)).ToList();
+					return result;
+				}
 			}
-			else {
-				var result = citiesString.Split(',').Select(n => Convert.ToInt64(n)).ToList();
-				return result;
+			set 
+			{
+				var ids = string.Join(",", value);
+				CrossSettings.Current.AddOrUpdateValue<string>(CitiIdsKey, ids);
 			}
 		}
 
