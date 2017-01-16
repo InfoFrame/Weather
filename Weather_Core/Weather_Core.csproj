@@ -43,6 +43,8 @@
     <Compile Include="Converters\UtcToStringConverter.cs" />
     <Compile Include="Interfaces\IErrorHandler.cs" />
     <Compile Include="Services\ErrorHandler.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Converters\IconIdToUrlConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

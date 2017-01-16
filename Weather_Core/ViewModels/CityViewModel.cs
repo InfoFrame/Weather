@@ -43,7 +43,7 @@ namespace Weather_Core.ViewModels
 		{
 			try
 			{
-				Forecast = await _dataSource.GetForecast(Today.CityId);
+				Forecast = await _dataSource.GetForecastAsync(Today.CityId);
 			}
 			catch (Exception ex)
 			{

@@ -22,7 +22,7 @@ namespace Weather_iOS.Views
 				binding.Bind(Name).To(a => a.CityName);
 				binding.Bind(WeatherDescription).To(a => a.WeatherDescription);
 
-				binding.Bind(_imageHelper).To(a => a.ImageUrl);
+				binding.Bind(_imageHelper).To(a => a.IconId).WithConversion("IconIdToUrlConverter");
 				binding.Apply();
 			});
 		}

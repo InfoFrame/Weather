@@ -6,8 +6,7 @@ namespace Weather_Core.Interfaces
 {
 	public interface IDataSource
 	{
-		// TODO: async
-		Task<Today> GetToday(long id);
-		Task<Forecast> GetForecast(long id);
+		Task<Today> GetTodayAsync(long id);
+		Task<Forecast> GetForecastAsync(long id);
 	}
 }

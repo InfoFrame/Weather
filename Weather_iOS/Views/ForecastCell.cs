@@ -23,7 +23,7 @@ namespace Weather_iOS.Views
 				binding.Bind(DescriptionLabel).To(a => a.WeatherDescription);
 				binding.Bind(MaxLabel).To(a => a.TempHigh);
 				binding.Bind(MinLabel).To(a => a.TempLow);
-				binding.Bind(_imageHelper).To(a => a.ImageUrl);
+				binding.Bind(_imageHelper).To(a => a.IconId);
 				binding.Apply();
 			});
 		}

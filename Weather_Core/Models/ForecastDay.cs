@@ -7,23 +7,23 @@ namespace Weather_Core.Models
 {
 	public class ForecastDay : RealmObject
 	{
-		public long CityId { get; set; }
 		public string WeatherDescription { get; set; }
 		public double TempHigh { get; set; }
 		public double TempLow { get; set; }
-		public string IconUrl { get; set; }
+		public string IconId { get; set; }
 		public long Day { get; set; }
 
-		// TODO: wrong place (converter?)
-		private const string ImageUrlFormat = "http://openweathermap.org/img/w/{0}.png";
-
-		public string ImageUrl		{
-			get
+		public static ForecastDay FromJson(dynamic item)
+		{
+			var forecastDay = new ForecastDay
 			{
-				return string.Format(ImageUrlFormat, IconUrl);
-			}
+				IconId = item["weather"][0]["icon"].Value,
+				WeatherDescription = item["weather"][0]["description"].Value,
+				TempHigh = item["main"]["temp_max"].Value,
+				TempLow = item["main"]["temp_min"].Value,
+				Day = item["dt"].Value
+			};
+			return forecastDay;
 		}
-	
-
 	}
 }

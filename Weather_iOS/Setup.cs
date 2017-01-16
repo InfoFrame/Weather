@@ -24,6 +24,7 @@ namespace Weather_iOS
 		{
 			base.FillValueConverters(registry);
 			registry.AddOrOverwrite("UtcToStringConverter", new UtcToStringConverter());
+			registry.AddOrOverwrite("IconIdToUrlConverter", new IconIdToUrlConverter());
 		}
 	}
 }

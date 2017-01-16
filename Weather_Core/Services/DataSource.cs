@@ -24,7 +24,7 @@ namespace Weather_Core.Services
 			_realm = Realm.GetInstance();
 		}
 
-		public async Task<Today> GetToday(long id)
+		public async Task<Today> GetTodayAsync(long id)
 		{
 			// TODO: caching error
 			var result = _realm.All<Today>().FirstOrDefault(d => (d.CityId == id) && (d.TimeStamp < (DateTime.UtcNow.Ticks)));
@@ -38,7 +38,7 @@ namespace Weather_Core.Services
 			return result;
 		}
 
-		public async Task<Forecast> GetForecast(long id)
+		public async Task<Forecast> GetForecastAsync(long id)
 		{
 			var result = _realm.All<Forecast>().FirstOrDefault(d => (d.CityId == id) && (d.TimeStamp < (DateTime.UtcNow.Ticks)));
 			if (result == null)

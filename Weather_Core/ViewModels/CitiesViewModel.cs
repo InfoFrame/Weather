@@ -104,7 +104,7 @@ namespace Weather_Core.ViewModels
 				var cityIds = _persistedSettings.GetCityIds();
 				foreach (var cityId in cityIds)
 				{
-					var today = await _dataSource.GetToday(cityId);
+					var today = await _dataSource.GetTodayAsync(cityId);
 					Todays.Add(today);
 				}
 			}

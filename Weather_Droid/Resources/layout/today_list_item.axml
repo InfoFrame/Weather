@@ -22,7 +22,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
     <Mvx.MvxImageView
-        local:MvxBind="ImageUrl ImageUrl"
+        local:MvxBind="ImageUrl IconId, Converter=IconIdToUrlConverter"
         android:layout_width="40dp"
         android:layout_height="40dp" />
 </LinearLayout>

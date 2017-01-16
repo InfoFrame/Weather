@@ -17,19 +17,11 @@ namespace Weather_Core.Models
 			dynamic json = JObject.Parse(jsonString);
 			Forecast forecast = new Forecast();
 			foreach (var item in json["list"])
-			{ // TODO: refactor deserialization to ForecastDay
-				var forecastDay = new ForecastDay
-				{
-					CityId = json["city"]["id"].Value,
-					IconUrl = item["weather"][0]["icon"].Value,
-					WeatherDescription = item["weather"][0]["description"].Value,
-					TempHigh = item["main"]["temp_max"].Value,
-					TempLow = item["main"]["temp_min"].Value,
-					Day = item["dt"].Value
-				};
-				forecast.CityId = json["city"]["id"].Value;
+			{
+				var forecastDay = ForecastDay.FromJson(item);
 				forecast.Forecasts.Add(forecastDay);
 			}
+			forecast.CityId = json["city"]["id"].Value;
 			forecast.TimeStamp = DateTime.UtcNow.Ticks;
 			return forecast;
 		}
