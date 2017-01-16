@@ -12,12 +12,10 @@ namespace Weather_Core
 	{
 		public App()
 		{
-			// TODO refactor
-			// TODO add more cities to json
 			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<CitiesViewModel>());
-			Mvx.RegisterSingleton<IPersistedSettings>(() => new PersistedSettings());
-			Mvx.RegisterType<IErrorHandler, ErrorHandler>();
 			Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
+			Mvx.RegisterType<IPersistedSettings, PersistedSettings>();
+			Mvx.RegisterType<IErrorHandler, ErrorHandler>();
 			Mvx.RegisterType<IDataSource, DataSource>();
 		}
 	}

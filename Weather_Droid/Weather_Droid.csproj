@@ -170,7 +170,7 @@
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Cities.axml" />
+    <AndroidResource Include="Resources\layout\cities.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
@@ -178,9 +178,9 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\today_list_item.axml" />
-    <AndroidResource Include="Resources\layout\City.axml" />
+    <AndroidResource Include="Resources\layout\city.axml" />
     <AndroidResource Include="Resources\layout\forecast_day_list_item.axml" />
-    <AndroidResource Include="Resources\layout\AddCity.axml" />
+    <AndroidResource Include="Resources\layout\add_city.axml" />
     <AndroidResource Include="Resources\layout\add_city_list_item.axml" />
     <AndroidResource Include="Resources\menu\add_city_menu.axml" />
   </ItemGroup>

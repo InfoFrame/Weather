@@ -2745,10 +2745,10 @@ namespace Weather_Droid
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int add_city_list_item = 2130968602;
+			public const int add_city = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int AddCity = 2130968603;
+			public const int add_city_list_item = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
 			public const int chart_layout = 2130968604;
@@ -2760,10 +2760,10 @@ namespace Weather_Droid
 			public const int chart_legend_item = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int Cities = 2130968607;
+			public const int cities = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int City = 2130968608;
+			public const int city = 2130968608;
 			
 			// aapt resource value: 0x7f040021
 			public const int design_bottom_sheet_dialog = 2130968609;

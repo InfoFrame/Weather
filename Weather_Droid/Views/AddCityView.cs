@@ -15,7 +15,7 @@ using Weather_Core.ViewModels;
 
 namespace Weather_Droid.Views
 {
-	[Activity(Label = "AddCityView")]
+	[Activity(Label = "Add City")]
 	public class AddCityView : MvxActivity
 	{
 		public new AddCityViewModel ViewModel
@@ -27,7 +27,7 @@ namespace Weather_Droid.Views
 		protected override void OnViewModelSet()
 		{
 			base.OnViewModelSet();
-			SetContentView(Resource.Layout.AddCity);
+			SetContentView(Resource.Layout.add_city);
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)

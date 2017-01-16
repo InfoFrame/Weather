@@ -30,7 +30,7 @@ namespace Weather_Droid.Views
 		protected override void OnViewModelSet()
 		{
 			base.OnViewModelSet();
-			SetContentView(Resource.Layout.Cities);// TODO naming convention
+			SetContentView(Resource.Layout.cities);// TODO naming convention
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)

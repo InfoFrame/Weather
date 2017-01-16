@@ -4,8 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using Newtonsoft.Json.Linq;
 using Weather_Core.Interfaces;
+using Weather_Core.Models;
 
 namespace Weather_Core.ViewModels
 {
@@ -14,7 +16,6 @@ namespace Weather_Core.ViewModels
 		private IPersistedSettings _persistedSettings;
 
 		private IList<Tuple<long, string>> _allCities;
-
 		private MvxObservableCollection<Tuple<long, string>> _filteredCities;
 		public MvxObservableCollection<Tuple<long, string>> FilteredCities
 		{
@@ -70,7 +71,7 @@ namespace Weather_Core.ViewModels
 			}
 		}
 
-		private void CitySelected(Tuple<long, string> city)
+		private async void CitySelected(Tuple<long, string> city)
 		{
 			var persistedCityIds = _persistedSettings.GetCityIds().ToList();
 			persistedCityIds.Add(city.Item1);

@@ -20,7 +20,7 @@ using Weather_Core.ViewModels;
 
 namespace Weather_Droid.Views
 {
-	[Activity(Label = "")]
+	[Activity(Label = "City")]
 	public class CityView : MvxActivity
 	{
 
@@ -60,7 +60,7 @@ namespace Weather_Droid.Views
 		protected override void OnViewModelSet()
 		{
 			base.OnViewModelSet();
-			SetContentView(Resource.Layout.City);
+			SetContentView(Resource.Layout.city);
 			Title = ViewModel.Today.CityName; // TODO?
 		}
 
