@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Weather_Droid</RootNamespace>
     <AssemblyName>Weather_Droid</AssemblyName>
-    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
