@@ -79,7 +79,7 @@ namespace Weather_Droid.Views
 			Chart.SecondaryAxis = secondaryAxis;
 
 			Chart.Title.Text = "Weather forecast";
-			Chart.Legend.Visibility = Com.Syncfusion.Charts.Enums.Visibility.Visible;
+            Chart.Legend.Visibility = Visibility.Visible;
 			UpdateChart();
 			ViewModel.PropertyChanged += (sender, e) =>
 			{

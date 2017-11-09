@@ -14,7 +14,7 @@ namespace Weather_Core.Services
 		{
 			get
 			{
-				var citiesString = CrossSettings.Current.GetValueOrDefault<string>(CitiIdsKey, string.Empty);
+				var citiesString = CrossSettings.Current.GetValueOrDefault(CitiIdsKey, string.Empty);
 				if (string.IsNullOrEmpty(citiesString))
 				{
 					return new List<long>();
@@ -27,7 +27,7 @@ namespace Weather_Core.Services
 			set 
 			{
 				var ids = string.Join(",", value);
-				CrossSettings.Current.AddOrUpdateValue<string>(CitiIdsKey, ids);
+				CrossSettings.Current.AddOrUpdateValue(CitiIdsKey, ids);
 			}
 		}
 
